@@ -1304,19 +1304,21 @@ export class Config {
         { name: "0.12×", mult: 0.125, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "0.25×", mult: 0.25, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "0.5×", mult: 0.5, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "~0.5×", mult: 0.5, hzOffset: 1.0, amplitudeSign: 1.0 },
         { name: "0.75×", mult: 0.75, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "1×", mult: 1.0, hzOffset: 0.0, amplitudeSign: 1.0 },
-        { name: "~1×", mult: 1.0, hzOffset: 1.5, amplitudeSign: -1.0 },
+        { name: "~1×", mult: 1.0, hzOffset: 1.0, amplitudeSign: -1.0 },
         { name: "2×", mult: 2.0, hzOffset: 0.0, amplitudeSign: 1.0 },
-        { name: "~2×", mult: 2.0, hzOffset: -1.3, amplitudeSign: -1.0 },
+        { name: "~2×", mult: 2.0, hzOffset: 1.0, amplitudeSign: -1.0 },
         { name: "3×", mult: 3.0, hzOffset: 0.0, amplitudeSign: 1.0 },
-        { name: "3.5×", mult: 3.5, hzOffset: -0.05, amplitudeSign: 1.0 },
+        { name: "3.5×", mult: 3.5, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "4×", mult: 4.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "~4×", mult: 4.0, hzOffset: -2.4, amplitudeSign: -1.0 },
         { name: "5×", mult: 5.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "6×", mult: 6.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "7×", mult: 7.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "8×", mult: 8.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "~8×", mult: 8.0, hzOffset: 1.0, amplitudeSign: 1.0 },
         { name: "9×", mult: 9.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "10×", mult: 10.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "11×", mult: 11.0, hzOffset: 0.0, amplitudeSign: 1.0 },
@@ -1326,6 +1328,7 @@ export class Config {
         { name: "15×", mult: 15.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         //ultrabox
         { name: "16×", mult: 16.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "~16×", mult: 16.0, hzOffset: 1.0, amplitudeSign: 1.0 },
         { name: "17×", mult: 17.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         //ultrabox
         { name: "18×", mult: 18.0, hzOffset: 0.0, amplitudeSign: 1.0 },
@@ -1334,8 +1337,21 @@ export class Config {
         { name: "20×", mult: 20.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "~20×", mult: 20.0, hzOffset: -5.0, amplitudeSign: -1.0 },
         // dogebox (maybe another mod also adds this? I got it from dogebox)
+		{ name: "21×", mult: 21.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "22×", mult: 22.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "23×", mult: 23.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "24×", mult: 24.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "25×", mult: 25.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "26×", mult: 26.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "27×", mult: 27.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "28×", mult: 28.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "29×", mult: 29.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "30×", mult: 30.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "31×", mult: 31.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "32×", mult: 32.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "48×", mult: 48.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "50×", mult: 50.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+		{ name: "64×", mult: 64.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "75×", mult: 75.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "100×", mult: 100.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         //50 and 100 are from dogebox
@@ -1439,14 +1455,19 @@ export class Config {
 
 
 	public static readonly feedbacks: DictionaryArray<Feedback> = toNameMap([
+		{ name: "None", indices: [[], [], [], []] },
 		{ name: "1⟲", indices: [[1], [], [], []] },
 		{ name: "2⟲", indices: [[], [2], [], []] },
 		{ name: "3⟲", indices: [[], [], [3], []] },
 		{ name: "4⟲", indices: [[], [], [], [4]] },
 		{ name: "1⟲ 2⟲", indices: [[1], [2], [], []] },
+		{ name: "2⟲ 3⟲", indices: [[], [2], [3], []] },
 		{ name: "3⟲ 4⟲", indices: [[], [], [3], [4]] },
+		{ name: "4⟲ 1⟲", indices: [[1], [], [], [4]] },
 		{ name: "1⟲ 2⟲ 3⟲", indices: [[1], [2], [3], []] },
 		{ name: "2⟲ 3⟲ 4⟲", indices: [[], [2], [3], [4]] },
+		{ name: "1⟲ 2⟲ 4⟲", indices: [[1], [2], [], [4]] },
+		{ name: "1⟲ 3⟲ 4⟲", indices: [[1], [], [3], [4]] },
 		{ name: "1⟲ 2⟲ 3⟲ 4⟲", indices: [[1], [2], [3], [4]] },
 		{ name: "1→2", indices: [[], [1], [], []] },
 		{ name: "1→3", indices: [[], [], [1], []] },
@@ -1466,8 +1487,8 @@ export class Config {
     ]);
     public static readonly feedbacks6Op: DictionaryArray<Feedback> = toNameMap([
         //placeholder makes life easier for later
-        { name: "Custom", indices: [[2, 3, 4, 5, 6], [], [], [], [], []] },
-
+        { name: "None", indices: [[], [], [], [] [] []] },
+		{ name: "Custom", indices: [[2, 3, 4, 5, 6], [], [], [], [], []] },
         { name: "1⟲", indices: [[1], [], [], [], [], []] },
         { name: "2⟲", indices: [[], [2], [], [], [], []] },
         { name: "3⟲", indices: [[], [], [3], [], [], []] },
@@ -1475,11 +1496,20 @@ export class Config {
         { name: "5⟲", indices: [[], [], [], [], [5], []] },
         { name: "6⟲", indices: [[], [], [], [], [], [6]] },
         { name: "1⟲ 2⟲", indices: [[1], [2], [], [], [], []] },
+		{ name: "2⟲ 3⟲", indices: [[], [2], [3], [], [], []] },
         { name: "3⟲ 4⟲", indices: [[], [], [3], [4], [], []] },
+		{ name: "4⟲ 5⟲, indices: [[], [], [], [4], [5], []] },
+		{ name: "5⟲ 6⟲", indices: [[], [], [], [], [5], [6]] },
+		{ name: "6⟲ 1⟲", indices: [[1], [], [], [], [], [6]] },
         { name: "1⟲ 2⟲ 3⟲", indices: [[1], [2], [3], [], [], []] },
         { name: "2⟲ 3⟲ 4⟲", indices: [[], [2], [3], [4], [], []] },
+		{ name: "3⟲ 4⟲ 5⟲", indices: [[], [], [3], [4], [5], []] },
+		{ name: "4⟲ 5⟲ 6⟲", indices: [[], [], [], [4], [5], [6]] },
         { name: "1⟲ 2⟲ 3⟲ 4⟲", indices: [[1], [2], [3], [4], [], []] },
+		{ name: "2⟲ 3⟲ 4⟲ 5⟲", indices: [[], [2], [3], [4], [5], []] },
+		{ name: "3⟲ 4⟲ 5⟲ 6⟲", indices: [[], [], [3], [4], [5], [6]] },
         { name: "1⟲ 2⟲ 3⟲ 4⟲ 5⟲", indices: [[1], [2], [3], [4], [5], []] },
+		{ name: "2⟲ 3⟲ 4⟲ 5⟲ 6⟲", indices: [[], [2], [3], [4], [5], [6]] },
         { name: "1⟲ 2⟲ 3⟲ 4⟲ 5⟲ 6⟲", indices: [[1], [2], [3], [4], [5], [6]] },
         { name: "1→2", indices: [[], [1], [], [], [], []] },
         { name: "1→3", indices: [[], [], [1], [], [], []] },
@@ -1488,8 +1518,14 @@ export class Config {
         { name: "1→6", indices: [[], [], [], [], [], [1]] },
         { name: "2→3", indices: [[], [], [2], [], [], []] },
         { name: "2→4", indices: [[], [], [], [2], [], []] },
+		{ name: "2→5", indices: [[], [], [], [], [2], []] },
+		{ name: "2→6", indices: [[], [], [], [], [], [2]] },
         { name: "3→4", indices: [[], [], [], [3], [], []] },
+		{ name: "3→5", indices: [[], [], [], [], [3], []] },
+		{ name: "3→6", indices: [[], [], [], [], [], [3]] },
         { name: "4→5", indices: [[], [], [], [], [4], []] },
+		{ name: "4→6", indices: [[], [], [], [], [], [4]] },
+		{ name: "5→6", indices: [[], [], [], [], [], [5]] },
         { name: "1→4 2→5 3→6", indices: [[], [], [], [1], [2], [3]] },
         { name: "1→5 2→6 3→4", indices: [[], [], [], [3], [1], [2]] },
         { name: "1→2→3→4→5→6", indices: [[], [1], [2], [3], [4], [5]] },
@@ -1619,7 +1655,126 @@ export class Config {
         return wave;
     }
     
+    public static generateSemisineWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = Math.max(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength), 0) - 0.5;
+        }
+        return wave;
+    }
 
+	public static generateAbsineWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength)) - 0.5;
+        }
+        return wave;
+    }
+
+		public static generateSharksineWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength)) * Math.ceil(0.6 * Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength)) - 0.5;
+        }
+        return wave;
+    }
+
+		public static generateFastsineWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength) * Math.ceil(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength));
+        }
+        return wave;
+    }
+	
+		public static generateCamelsineWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = Math.abs(Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength)) * Math.ceil(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength)) - 0.5;
+        }
+        return wave;
+    }
+	
+		public static generateAltsineWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = 2 * Math.cos(i * Math.PI * 2.0 / Config.sineWaveLength) * Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength));
+        }
+        return wave;
+    }
+
+	public static generateAltsemisineWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = (2 * Math.cos(i * Math.PI * 2.0 / Config.sineWaveLength) * Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength))) * Math.ceil(0.6 * Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength));
+        }
+        return wave;
+    }
+
+	public static generateSiangleWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength) * Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength));
+        }
+        return wave;
+    }
+	
+	 public static generateSemisiangleWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = Math.max(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength) * Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength))) - 0.5;
+        }
+        return wave;
+    }
+
+	public static generateAbsiangleWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = Math.pow(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength), 2) - 0.5;
+        }
+        return wave;
+    }
+
+		public static generateSharksiangleWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = Math.pow(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength), 2) * Math.ceil(0.6 * Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength)) - 0.5;
+        }
+        return wave;
+    }
+
+		public static generateFastsiangleWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = (Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength) * Math.abs(Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength))) * Math.ceil(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength));
+        }
+        return wave;
+    }
+	
+		public static generateCamelsiangleWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = Math.pow(Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength), 2) * Math.ceil(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength)) - 0.5;
+        }
+        return wave;
+    }
+	
+		public static generateAltsiangleWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = 4 * (Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength) * Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength))) * Math.pow(Math.cos(i * Math.PI * 2.0 / Config.sineWaveLength), 2);
+        }
+        return wave;
+    }
+
+	public static generateAltsemisiangleWave(): Float32Array {
+        const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
+        for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
+            wave[i] = (4 * (Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength) * Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength))) * Math.pow(Math.cos(i * Math.PI * 2.0 / Config.sineWaveLength), 2)) * Math.ceil(0.6 * Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength));
+        }
+        return wave;
+    }
+	
     public static readonly sineWave: Float32Array = Config.generateSineWave();
 
     public static readonly perEnvelopeSpeedIndices: number[] = [0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.2, 0.25, 0.3, 0.3333, 0.4, 0.5, 0.6, 0.6667, 0.7, 0.75, 0.8, 0.9, 1, 1.25, 1.3333, 1.5, 1.6667, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 24, 32, 40, 64, 128, 256];
@@ -1761,10 +1916,26 @@ export class Config {
 		{ name: "sine", samples: Config.sineWave },
         { name: "triangle", samples: Config.generateTriWave() },
         { name: "pulse width", samples: Config.generateSquareWave(0.5) },
-        { name: "sawtooth", samples: Config.generateSawWave() },
-        { name: "ramp", samples: Config.generateSawWave(true) },
+        { name: "ramp", samples: Config.generateSawWave() },
+        { name: "sawtooth", samples: Config.generateSawWave(true) },
         { name: "trapezoid", samples: Config.generateTrapezoidWave(2) },
         { name: "quasi-sine", samples: Config.generateQuasiSineWave() },
+		{ name: "semisine", samples: Config.generateSemisineWave() },
+		{ name: "absine", samples: Config.generateAbsineWave() },
+		{ name: "sharksine", samples: Config.generateSharksineWave() },
+		{ name: "fastsine", samples: Config.generateFastsineWave() },
+		{ name: "camelsine", samples: Config.generateCamelsineWave() },
+		{ name: "altsine", samples: Config.generateAltsineWave() },
+		{ name: "altsemisine", samples: Config.generateAltsemisineWave() },
+		{ name: "siangle", samples: Config.generateSiangleWave() },
+		{ name: "semisiangle", samples: Config.generateSemisiangleWave() },
+		{ name: "absiangle", samples: Config.generateAbsiangleWave() },
+		{ name: "sharksiangle", samples: Config.generateSharksiangleWave() },
+		{ name: "fastsiangle", samples: Config.generateFastsiangleWave() },
+		{ name: "camelsiangle", samples: Config.generateCamelsiangleWave() },
+		{ name: "altsiangle", samples: Config.generateAltsiangleWave() },
+		{ name: "altsemisiangle", samples: Config.generateAltsemisineWave() },
+		
 		//{ name: "white noise", samples: Config.generateWhiteNoiseFmWave() },
 		//{ name: "1-bit white noise", samples: Config.generateOneBitWhiteNoiseFmWave() },
     ]);
