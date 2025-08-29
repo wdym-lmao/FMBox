@@ -414,7 +414,7 @@
         if (Math.floor(Math.random() * 3) == 0) { //more than doubled chance for a plant to show up
             document.getElementById("goldboxPlant").innerHTML = "  " + plants[(Math.floor(Math.random() * plants.length))];
             //Slarmoo's Box holiday plants
-            const winterPlants = ["🎄", "🍪", "☃️", "🎁", "❄️", "🎅", "🏂" "🌨️", "⛄"];
+            const winterPlants = ["🎄", "🍪", "☃️", "🎁", "❄️", "🎅", "🏂", "🌨️", "⛄"];
             if ((date.getDate() >= 22 && date.getDate() <= 26) && date.getMonth() == 11) {
                 document.getElementById("goldboxPlant").innerHTML = "  " + winterPlants[(Math.floor(Math.random() * winterPlants.length))];
             }
@@ -424,7 +424,7 @@
                 document.getElementById("goldboxPlant").innerHTML = "  " + spookyPlants[(Math.floor(Math.random() * spookyPlants.length))];
             }
             //Slarmoo's Box valentines plants
-            const heartPlants = ["❤️", "🧡", "💛", "💚", "🩵", "💙", "💜", "🩷", "💟", "💝", "💌", "💘", "💞", "💗", ];
+            const heartPlants = ["❤️", "🧡", "💛", "💚", "🩵", "💙", "💜", "🩷", "💟", "💝", "💌", "💘", "💞", "💗"];
             if ((date.getDate() >= 13 && date.getDate() <= 15) && date.getMonth() == 1) {
                 document.getElementById("goldboxPlant").innerHTML = "  " + heartPlants[(Math.floor(Math.random() * heartPlants.length))];
             }
@@ -441,7 +441,7 @@
         }
         if ((date.getDate() == 13) && date.getMonth() == 4) {
             const years = date.getFullYear() - 2024;
-            const birthdayPlants = [years + " year" + (years != 1 ? "s" : "") + "!", "🎂", "🎉", "Happy Birthday!", "Anniversary"];
+            const birthdayPlants = [years + " year" + (years != 1 ? "s" : "") + "‼️", "🎂", "🎉", "🥳", "Happy Birthday!", "Anniversary"];
             document.getElementById("goldboxPlant").innerHTML = "  " + birthdayPlants[(Math.floor(Math.random() * birthdayPlants.length))];
         }
 
