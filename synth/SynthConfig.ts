@@ -1658,7 +1658,7 @@ export class Config {
     public static generateSemisineWave(): Float32Array {
         const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
         for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
-            wave[i] = Math.max(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength), 0) - 0.5;
+            wave[i] = Math.max(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength), 0);
         }
         return wave;
     }
@@ -1666,7 +1666,7 @@ export class Config {
 	public static generateAbsineWave(): Float32Array {
         const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
         for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
-            wave[i] = Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength)) - 0.5;
+            wave[i] = Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength));
         }
         return wave;
     }
@@ -1674,7 +1674,7 @@ export class Config {
 		public static generateSharksineWave(): Float32Array {
         const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
         for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
-            wave[i] = Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength)) * Math.ceil(0.6 * Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength)) - 0.5;
+            wave[i] = Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength)) * Math.ceil(0.6 * Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength));
         }
         return wave;
     }
@@ -1690,7 +1690,7 @@ export class Config {
 		public static generateCamelsineWave(): Float32Array {
         const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
         for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
-            wave[i] = Math.abs(Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength)) * Math.ceil(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength)) - 0.5;
+            wave[i] = Math.abs(Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength)) * Math.ceil(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength));
         }
         return wave;
     }
@@ -1722,7 +1722,7 @@ export class Config {
 	 public static generateSemisiangleWave(): Float32Array {
         const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
         for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
-            wave[i] = Math.max(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength) * Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength))) - 0.5;
+            wave[i] = Math.max(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength) * Math.abs(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength)));
         }
         return wave;
     }
@@ -1730,7 +1730,7 @@ export class Config {
 	public static generateAbsiangleWave(): Float32Array {
         const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
         for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
-            wave[i] = Math.pow(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength), 2) - 0.5;
+            wave[i] = Math.pow(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength), 2);
         }
         return wave;
     }
@@ -1738,7 +1738,7 @@ export class Config {
 		public static generateSharksiangleWave(): Float32Array {
         const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
         for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
-            wave[i] = Math.pow(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength), 2) * Math.ceil(0.6 * Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength)) - 0.5;
+            wave[i] = Math.pow(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength), 2) * Math.ceil(0.6 * Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength));
         }
         return wave;
     }
@@ -1754,7 +1754,7 @@ export class Config {
 		public static generateCamelsiangleWave(): Float32Array {
         const wave: Float32Array = new Float32Array(Config.sineWaveLength + 1);
         for (let i: number = 0; i < Config.sineWaveLength + 1; i++) {
-            wave[i] = Math.pow(Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength), 2) * Math.ceil(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength)) - 0.5;
+            wave[i] = Math.pow(Math.sin(i * Math.PI * 4.0 / Config.sineWaveLength), 2) * Math.ceil(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength));
         }
         return wave;
     }
