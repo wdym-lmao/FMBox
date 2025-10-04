@@ -14853,7 +14853,7 @@ export class Synth {
 				const operator#PhaseInt = operator#PhaseMix|0;
 				const operator#Index    = operator#PhaseInt & ` + Config.sineWaveMask + `;
                 const operator#Sample   = operator#Wave[operator#Index];
-                operator#Output         = operator#Sample + (operator#Wave[operator#Index + 1] - operator#Sample) * (operator#PhaseMix - operator#PhaseInt);
+                operator#Output         = operator#Sample;
 				const operator#Scaled   = operator#OutputMult * operator#Output;
 		`).split("\n");
 
